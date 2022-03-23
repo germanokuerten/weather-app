@@ -29,7 +29,7 @@ $button.on("click", () => {
 
     // then throw into api address
 
-    $.ajax(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=d5a2d9bc210f3ec1e02af0da5fa7e705`)
+    $.ajax(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=d5a2d9bc210f3ec1e02af0da5fa7e705&units=metric`)
     .then((data) => {
         // test data input/output
         console.log(data)
