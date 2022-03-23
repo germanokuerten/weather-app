@@ -33,21 +33,15 @@ $button.on("click", () => {
     .then((data) => {
         // test data input/output
         console.log(data)
-        // $("#city").html(`<p>${data.name}</p>`)
+        
+        // output the results /information
+
+        $("#city").text(`City: ${data.name}`)
+        $("#temperature").text(`Temperature: ${data.main.temp}`)
+        $("#feels-like").text(`Feels Like: ${data.main.feels_like}`)
+        $("#weather").text(`Weather: ${data.weather[0].main}`)
+
     })
-    
-    // output the results /information
-    
-
-
-
-
-    // convert lan and lon into the data we want.
-
-    
-
-    
-
     
     // city = data.name
     // temperature = data.main.temp
