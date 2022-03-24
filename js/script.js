@@ -14,7 +14,7 @@ $button.on("click", () => {
     const searchCity = $input.val()
 
     // be able to search input data from searchCity
-    $.ajax(`http://api.openweathermap.org/geo/1.0/direct?q=${searchCity},&appid=d5a2d9bc210f3ec1e02af0da5fa7e705`)
+    $.ajax(`https://api.openweathermap.org/geo/1.0/direct?q=${searchCity},&appid=d5a2d9bc210f3ec1e02af0da5fa7e705`)
     .then((coordinates) => {
         console.log(coordinates)
 
@@ -52,4 +52,3 @@ $button.on("click", () => {
 
     })
 })
-
