@@ -10,8 +10,16 @@ const $input = $("input")
 const $button = $("button")
 
 
-$button.on("click", () => {
-    const searchCity = $input.val()
+// Return/Enter key function
+$input.keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("button").click();
+    }
+});
+
+$button.on("click", (event) => {
+    
+    const searchCity = $input.val() 
 
     // be able to search input data from searchCity
     $.ajax(`https://api.openweathermap.org/geo/1.0/direct?q=${searchCity},&appid=d5a2d9bc210f3ec1e02af0da5fa7e705`)
@@ -41,6 +49,9 @@ $button.on("click", () => {
         $("#feels-like").text(`Feels Like: ${data.main.feels_like}`)
         $("#weather").text(`Weather: ${data.weather[0].main}`)
 
+        $('input[type="text"]').val('');
+
+        
     })
     
     // city = data.name

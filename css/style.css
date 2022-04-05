@@ -1,4 +1,6 @@
 body {
+    background-image: url('../images/daniel-ramirez-unsplash.jpg');
+    background-size: cover; 
     background-color: black;
 }
 
