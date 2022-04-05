@@ -1,5 +1,5 @@
 body {
-    background-image: url('../images/daniel-ramirez-unsplash.jpg'); 
+    background-image: url('../images/anurag-challa-wA-hpHErU_I-unsplash.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-color: black;
@@ -7,9 +7,36 @@ body {
 
 h1 {
     color: white;
+    text-align: center;
 }
 
 main {
     color: white;
+    text-align: center;
+}
+
+#city {
+    font-size: 150%;
+}
+
+#weather {
+    margin-top: -1rem;
+}
+
+#temperature {
+    font-size: 300%;
+    margin-top: -1.3rem;
+}
+
+#feels-like {
+    margin-top: -1rem;
+}
+
+.input-button {
+    text-align: center; 
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 70vh;
 }
 

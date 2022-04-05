@@ -39,10 +39,10 @@ $button.on("click", (event) => {
         console.log(data)
         
         // output the results /information
-        $("#city").text(`City: ${data.name}`)
-        $("#temperature").text(`Temperature: ${data.main.temp}`)
-        $("#feels-like").text(`Feels Like: ${data.main.feels_like}`)
-        $("#weather").text(`Weather: ${data.weather[0].main}`)
+        $("#city").text(`${data.name}`)
+        $("#temperature").text(`${data.main.temp}°`)
+        $("#feels-like").text(`Thermal sensation: ${data.main.feels_like}°`)
+        $("#weather").text(`${data.weather[0].main}`)
 
         // clear out input field once "clicked"
         $('input[type="text"]').val('');     
