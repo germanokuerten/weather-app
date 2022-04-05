@@ -1,9 +1,7 @@
 body {
-    background-image: url('../images/daniel-ramirez-unsplash.jpg');
-    
+    background-image: url('../images/daniel-ramirez-unsplash.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
-
     background-color: black;
 }
 

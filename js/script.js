@@ -1,6 +1,5 @@
 // const APIKEY = "d5a2d9bc210f3ec1e02af0da5fa7e705";
 
-
 const $city = $("#city")
 const $temperature = $("#temperature")
 const $feelsLike = $("#feels-like")
@@ -27,31 +26,26 @@ $button.on("click", (event) => {
         console.log(coordinates)
 
     // grab lat and lon from searchCity.
-
     const lat = coordinates[0].lat;
     const lon = coordinates[0].lon;
 
     // chech lat and lon
-
     console.log(lat, lon)
 
     // then throw into api address
-
     $.ajax(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=d5a2d9bc210f3ec1e02af0da5fa7e705&units=metric`)
     .then((data) => {
         // test data input/output
         console.log(data)
         
         // output the results /information
-
         $("#city").text(`City: ${data.name}`)
         $("#temperature").text(`Temperature: ${data.main.temp}`)
         $("#feels-like").text(`Feels Like: ${data.main.feels_like}`)
         $("#weather").text(`Weather: ${data.weather[0].main}`)
 
-        $('input[type="text"]').val('');
-
-        
+        // clear out input field once "clicked"
+        $('input[type="text"]').val('');     
     })
     
     // city = data.name
@@ -59,7 +53,7 @@ $button.on("click", (event) => {
     // feels like = data.main.feels_like
     // weather = data.weather[1]
 
-    // output next to parameters.
+    // output next to parameters
 
     })
 })
